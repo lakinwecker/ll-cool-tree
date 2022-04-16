@@ -1,0 +1,7 @@
+maintwist: 1.0;
+mainlength: 0.05;
+B: 4;
+iterations: 10;
+
+!(0.2)B(5.0);
+B(l) => ^(maintwist)F(l*mainlength)[&(30.0)B(l*0.2)][^(30.0)B(l*0.2)]^(maintwist)B(l*(1.0-mainlength));

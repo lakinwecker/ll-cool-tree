@@ -1,0 +1,18 @@
+#--Parser----------------------------------------------------------------------#
+
+	The parser is responsible for ensuring that the l-system file has the correct syntax, it will then build up an object model of the l-system. 
+	I'm not sure, but I figure a flex/bison implementation of this should be possible, and might be the best way to go.  While we don't necessarily need to overly complicate the l-systems yet, having a wide array of mathematical functions at our disposal is a good idea.   Another possibility is using a scripting language to represent the l-systems.  It might actually be possible to use python's lambda construct in order to represent each of the modules.  I'm not stuck on python as of yet, because if another language more closely models the l-system concept then I would be ok using it.
+	Please check out the l-system file which describes how the l-systems work.
+
+
+#--L-System Evaluator----------------------------------------------------------#
+	This is where the evaluation of the l-system takes place.  It will communicate with the parser in order to get the l-system model from the l-system description.  It can then be asked to evaluate the l-system using the specified parameters.  I'm leaning towards a builder pattern here, so that the final representation of the l-system object can be custom depending on the client it's used in.
+	A major portion of this system should be some sort of predictable random noise generator.  I'm leaning towards perlin noise, because that's what I'm familiar with, however I would be up for suggestions.
+	This should be the fasted portion of the system, because I can see it being the most used portion.  Although I agree with implement first, optimize second, the client API should be well enough defined as to allow for efficient implementation of this portion.
+	The client API is something I'm still a bit fuzzy on, perhaps we should have a mailing list or IRC discussion on this issue. I would like to keep this portion simple, and easily used in any client.
+
+
+#--The renderer/editor---------------------------------------------------------#
+	Although the target will be a client library, I would like to create an offline editor for this.  This is already implemented and seems like it should be the driving force of the library implementation.  
+
+	I'm not positive of how we want to separate all of the logical parts of this in CVS.   It's most likely that the client library should be in libs, but then should this renderer/editor be a seperate entity, inside of tools?   Should this renderer/editor be an addon to entity forge( I think I like this idea ).

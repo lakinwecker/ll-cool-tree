@@ -1,0 +1,3 @@
+	L-systems were first developed to model biological systems and their development.  Their applications to computer graphics were noticed much later on, and typically are offline, used in ray-tracers and the like.  
+
+	They closely model BNF grammars, but I'm not sure on the strength of this relationship. Each L-system is made up of a series of rules, rather than defining the syntax of possible inputs, these rules define a series of permutations that the l-system makes at each iteration.  Combined with a number of iterations, these l-systems define an infinite number of possibilities, especially with the random choosing between similar rules.  

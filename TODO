@@ -1,0 +1,24 @@
+#-------------------------------------------------------------------------------
+# Interface issues.
+#-------------------------------------------------------------------------------
+* Implement a better load/save/close/new mechanism and or paradigm, this
+  should probably be similar to a current desktop system.
+* There needs to be a way to specify which models you want to use for the
+  branches and which models you want to use for the leaves.
+* Same as above except with texture maps.
+* 
+
+#-------------------------------------------------------------------------------
+# Backend issues.
+#-------------------------------------------------------------------------------
+* Fix the TGA loader to be Endian Aware.
+* Begin using 3rd Party image loaders, such as libpng.
+* Models should be specified, not hardcoded.
+* Texture maps should be specified not hardcoded.
+
+
+#-------------------------------------------------------------------------------
+# Overall design issues.
+#-------------------------------------------------------------------------------
+* Everything needs to be factored out into the new design system which is
+  detailed in the documentation.
